@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://robertguo.site/about/index.html</loc>
+    
+    <lastmod>2018-03-07T03:46:11.297Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://robertguo.site/tags/index.html</loc>
+    
+    <lastmod>2018-03-06T16:11:24.432Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://robertguo.site/ubuntu-system-install.html</loc>
+    
+    <lastmod>2018-03-06T15:58:25.185Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://robertguo.site/2018/03/05/hexo-markdown-style-test/</loc>
     
-    <lastmod>2018-03-04T17:04:25.716Z</lastmod>
+    <lastmod>2018-03-04T17:04:25.717Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://robertguo.site/2017/09/05/HelloWorld/</loc>
     
-    <lastmod>2018-03-04T16:47:50.748Z</lastmod>
+    <lastmod>2018-03-04T16:47:50.749Z</lastmod>
     
   </url>
   
