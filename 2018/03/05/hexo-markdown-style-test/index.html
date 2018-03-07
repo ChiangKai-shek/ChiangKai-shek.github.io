@@ -87,10 +87,12 @@
 <meta property="og:site_name" content="Blow a kiss,fire a gun">
 <meta property="og:description" content="hexo的md风格测试">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-04T17:04:25.716Z">
+<meta property="og:image" content="http://robertguo.site/2018/03/05/hexo-markdown-style-test/1.png">
+<meta property="og:updated_time" content="2018-03-07T18:12:57.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo-markdown-style-test">
 <meta name="twitter:description" content="hexo的md风格测试">
+<meta name="twitter:image" content="http://robertguo.site/2018/03/05/hexo-markdown-style-test/1.png">
 
 
 
@@ -342,7 +344,89 @@
 
       
         <h2 id="hexo的md风格测试"><a href="#hexo的md风格测试" class="headerlink" title="hexo的md风格测试"></a>hexo的md风格测试</h2><a id="more"></a>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6>
+<hr>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="1.png" alt="本地图片"></h2><h2 id="链接-404NotFound"><a href="#链接-404NotFound" class="headerlink" title="链接:404NotFound"></a><a href="https://www.google.com" target="_blank" rel="noopener">链接:404NotFound</a></h2><p>列表</p>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3<ul>
+<li>3.1</li>
+<li>3.2</li>
+<li>3.3<ul>
+<li>3.3.1<ul>
+<li>3.3.1.1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>一</li>
+<li>二</li>
+<li>三<ol>
+<li>三-一</li>
+<li>三-二<ol>
+<li>三-二-一<ol>
+<li>三-二-一-一</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p><em>斜体</em><br><strong>加粗</strong><br><del>删除线</del><br><strong> <em> <del>加粗斜体删除线</del> </em> </strong></p>
+<hr>
+<blockquote>
+<p>md引用blablabla</p>
+</blockquote>
+<blockquote><p>hexo-blockquote</p>
+</blockquote>
+<hr>
+<blockquote><p>带作者,来源的引用</p>
+<footer><strong>作者</strong><cite>来源</cite></footer></blockquote>
+<hr>
+<blockquote><p>带链接来源的引用</p>
+<footer><strong>@薄雾</strong><cite><a href="https://weibo.com/bowu?refer_flag=1001030201_" target="_blank" rel="noopener">博物杂志</a></cite></footer></blockquote>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//md代码块*</span></div><div class="line"><span class="function"><span class="built_in">list</span>* <span class="title">concat</span><span class="params">(<span class="built_in">list</span>* l,<span class="built_in">list</span>* r)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">list</span>** indir = &amp;l;</div><div class="line">    <span class="keyword">while</span>(* indir)</div><div class="line">    &#123;</div><div class="line">        indir = &amp;((* indir)-&gt;next);</div><div class="line">    &#125;</div><div class="line">    * indir = r;</div><div class="line">    <span class="keyword">return</span> l;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>hexo-codeblock</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--hexo的codeblock代码块--&gt;</span></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">居中对齐</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">asdfa</td>
+<td style="text-align:center">asdfaew</td>
+<td style="text-align:right">fdadf</td>
+</tr>
+<tr>
+<td style="text-align:left">dsafasdfasd</td>
+<td style="text-align:center">adsfasfd</td>
+<td style="text-align:right">afdafd</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> task1</li>
+<li style="list-style: none"><input type="checkbox"> task2</li>
+<li style="list-style: none"><input type="checkbox"> task3</li>
+</ul>
+<hr>
+<p> emoji: :smirk:<br> emoji: :no_mouth:</p>
+<hr>
+
       
     </div>
     
@@ -533,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo的md风格测试"><span class="nav-number">1.</span> <span class="nav-text">hexo的md风格测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number"></span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo的md风格测试"><span class="nav-number">1.</span> <span class="nav-text">hexo的md风格测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number"></span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接-404NotFound"><span class="nav-number">3.</span> <span class="nav-text">链接:404NotFound</span></a></li></ol></div>
             
 
           </div>
