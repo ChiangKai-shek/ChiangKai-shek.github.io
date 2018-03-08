@@ -270,7 +270,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="RobertGuo">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -308,17 +308,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/07/ubuntu-system-install/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/07/ubuntu-system-install/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -346,10 +335,17 @@
         <blockquote><p><em>学计算机的,大学期间不调戏调戏Linux等于白读了四年!</em></p>
 <footer><strong>我的Linux老师</strong><cite>第一节课上</cite></footer></blockquote>
 <a id="more"></a>
-<p>我自己对Linux挺有兴趣,就总想弄来玩一玩<br>开始是在虚拟机上用,但是虚拟机总是有那么点膈应人<br>感觉就像带个手套去牵妹子得手<br>干脆在原来Win10的基础上装成双系统<br>来回倒腾了好几个系统,统统给我在安装前卡住</p>
-<p>百度来百度去,系统倒是装了上去,但是又出现了各种各样的问题<br>难受的一匹</p>
-<h1 id="找问题原因"><a href="#找问题原因" class="headerlink" title="找问题原因"></a><font color="black">找问题原因</font></h1><p><strong>凡事先谷歌/百度</strong></p>
-<p>在网上逛了一圈,说啥的都有<br>我再看了看我这电脑配置</p>
+<p>我自己对Linux挺有兴趣,就总想弄来玩一玩
+开始是在虚拟机上用,但是虚拟机总是有那么点膈应人
+感觉就像带个手套去牵妹子得手
+干脆在原来Win10的基础上装成双系统
+来回倒腾了好几个系统,统统给我在安装前卡住</p>
+<p>百度来百度去,系统倒是装了上去,但是又出现了各种各样的问题
+难受的一匹</p>
+<h1 id="font-color-black-找问题原因-font"><font color="black">找问题原因</font></h1>
+<p><strong>凡事先谷歌/百度</strong></p>
+<p>在网上逛了一圈,说啥的都有
+我再看了看我这电脑配置</p>
 <blockquote>
 <ul>
 <li><em>CPU: i5-64003</em></li>
@@ -358,54 +354,90 @@
 <li><em>打算往上装的系统: Ubuntu 16.04</em></li>
 </ul>
 </blockquote>
-<p>结合网上查的,应该是显卡驱动问题没跑了<br>有说 核显+独显 电源管理问题<br>也有说 Ubuntu 的第三方显卡驱动nouveau的问题<br>先不管它啥问题,我就先不给这显卡上驱动行不行?</p>
-<h1 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a><font color="black">解决问题</font></h1><h2 id="先安装上系统"><a href="#先安装上系统" class="headerlink" title="先安装上系统"></a>先安装上系统</h2><ol>
+<p>结合网上查的,应该是显卡驱动问题没跑了
+有说 核显+独显 电源管理问题
+也有说 Ubuntu 的第三方显卡驱动nouveau的问题
+先不管它啥问题,我就先不给这显卡上驱动行不行?</p>
+<h1 id="font-color-black-解决问题-font"><font color="black">解决问题</font></h1>
+<h2 id="先安装上系统">先安装上系统</h2>
+<ol>
 <li>U盘安装卡在logo处时,强制关机就行,然后再次安装</li>
 <li>再进入U盘安装时,没进安装界面狂按键盘就行,然后会要选语言,选个看得懂的就行</li>
 <li>在F6把nomodeset勾上,然后进入安装</li>
 <li>后面按照正常步骤安装就行</li>
 </ol>
-<h2 id="安装显卡驱动"><a href="#安装显卡驱动" class="headerlink" title="安装显卡驱动"></a>安装显卡驱动</h2><p>因为在前面没装上显卡驱动,所以电脑用起来会很操蛋</p>
+<h2 id="安装显卡驱动">安装显卡驱动</h2>
+<p>因为在前面没装上显卡驱动,所以电脑用起来会很操蛋</p>
 <ol>
 <li>先去Nvidia官网下载驱动<a href="http://www.nvidia.cn/Download/index.aspx?lang=cn" target="_blank" rel="noopener"><font color="#BFEFFF">NVIDIA驱动下载</font></a></li>
 <li>为了方便后面安装,把原本很长的名字改短,比如我改成了nvidia.run</li>
 <li>用<code>cd</code>命令进入下载好的驱动文件所在的目录</li>
-<li><p>然后给这个驱动改改权限</p>
+<li>然后给这个驱动改改权限</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chmod 777 nvidia.run</div></pre></td></tr></table></figure>
-</li>
-<li><p>把第三方驱动nouveau拉黑(视情况,可做可不做)</p>
+<ol start="5">
+<li>把第三方驱动nouveau拉黑(视情况,可做可不做)</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gedit /etc/modprobe.d/blacklist.conf</div></pre></td></tr></table></figure>
-<p>在文件末尾添加<code>blacklist nouveau</code><br>然后刷新配置</p>
+<p>在文件末尾添加<code>blacklist nouveau</code>
+然后刷新配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo update-initramfs -u</div></pre></td></tr></table></figure>
 <p>完事了最好重启下系统</p>
-</li>
-<li><p>停用图形服务</p>
+<ol start="6">
+<li>停用图形服务</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service lightdm stop</div></pre></td></tr></table></figure>
-</li>
-<li><p>先用<code>cd</code>命令进入下载好的驱动的目录下,安装驱动</p>
+<ol start="7">
+<li>先用<code>cd</code>命令进入下载好的驱动的目录下,安装驱动</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ./nvidia.run -no-opengl-files</div></pre></td></tr></table></figure>
 <p><code>-no-opengl-files</code>是表示不安装openGL相关组件,因为这东西有可能导致开机登录又跳回登录界面,最好不装上去</p>
-</li>
-<li><p>然后重新启动图形界面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service lightdm restart</div></pre></td></tr></table></figure>
-</li>
-<li><p>最后重启系统,驱动问题就搞定了</p>
-</li>
+<ol start="8">
+<li>然后重新启动图形界面</li>
 </ol>
-<h1 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a><font color="black">其他问题</font></h1><p>我在学校为了方便,用的是笔记本带一个拓展显示器</p>
-<p>在安装完驱动并使用过一段时间后,会出现类似图片上的<code>无法应用原保存的显示器设置</code><br><img src="http://img.blog.csdn.net/20150726102509986" width="430" height="" style="margin-top:20px;"></p>
-<p>笔记本屏幕分辨率也只有640x480这一个选项<br>网上搜索之后发现,是双屏有几率会出现这样的问题<br>但是到最后我也没搞清楚是什么原因导致的<br>以下是我尝试过的解决方法:</p>
-<h2 id="删除monitors-xml-文件"><a href="#删除monitors-xml-文件" class="headerlink" title="删除monitors.xml 文件"></a>删除monitors.xml 文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm ~/.config/monitors.xml</div></pre></td></tr></table></figure>
-<p>尝试使用这个方法之后开机时间明显变长了<br>估计是生成新的显示配置文件<br>但是最终还是没有解决我的问题</p>
-<h2 id="手动添加屏幕分辨率选项"><a href="#手动添加屏幕分辨率选项" class="headerlink" title="手动添加屏幕分辨率选项"></a>手动添加屏幕分辨率选项</h2><h3 id="查看各屏幕分辨率模式"><a href="#查看各屏幕分辨率模式" class="headerlink" title="查看各屏幕分辨率模式"></a>查看各屏幕分辨率模式</h3><p>在Terminal(终端)输入<code>xrandr</code>查看屏幕分辨率列表<br>之后会出现类似如下的信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Screen 0: minimum 320 x 200, current 3286 x 1080, maximum 32767 x 32767</div><div class="line">eDP1 connected primary 1366x768+0+312 (normal left inverted right x axis y axis) 309mm x 173mm</div><div class="line">640x480        59.9*</div><div class="line">DP1 disconnected (normal left inverted right x axis y axis)</div><div class="line">HDMI1 disconnected (normal left inverted right x axis y axis)</div><div class="line">DP2 connected 1024x768 (normal left inverted right x axis y axis) 0mm x 0mm</div><div class="line">1024x768      60.0*</div><div class="line">800x600        60.3    56.2</div><div class="line">848x480        60.0</div><div class="line">640x480        59.9</div></pre></td></tr></table></figure></p>
-<p>其中 eDP1/DP1/DP2 是各个显示接口的情况,<code>*</code>代表该接口正在使用的分辨率<br>我的就是连接了eDP1和DP2两个接口</p>
-<h3 id="用cvt新建一个显示模式"><a href="#用cvt新建一个显示模式" class="headerlink" title="用cvt新建一个显示模式"></a>用cvt新建一个显示模式</h3><figure class="highlight plain"><figcaption><span>新建一个1920x1080分辨率的模式</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cvt 1920 1080</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo service lightdm restart</div></pre></td></tr></table></figure>
+<ol start="9">
+<li>最后重启系统,驱动问题就搞定了</li>
+</ol>
+<h1 id="font-color-black-其他问题-font"><font color="black">其他问题</font></h1>
+<p>我在学校为了方便,用的是笔记本带一个拓展显示器</p>
+<p>在安装完驱动并使用过一段时间后,会出现类似图片上的<code>无法应用原保存的显示器设置</code>
+<img src="http://img.blog.csdn.net/20150726102509986" width="430" height="" style="margin-top:20px;"></p>
+<p>笔记本屏幕分辨率也只有640x480这一个选项
+网上搜索之后发现,是双屏有几率会出现这样的问题
+但是到最后我也没搞清楚是什么原因导致的
+以下是我尝试过的解决方法:</p>
+<h2 id="删除monitors-xml-文件">删除monitors.xml 文件</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm ~/.config/monitors.xml</div></pre></td></tr></table></figure>
+<p>尝试使用这个方法之后开机时间明显变长了
+估计是生成新的显示配置文件
+但是最终还是没有解决我的问题</p>
+<h2 id="手动添加屏幕分辨率选项">手动添加屏幕分辨率选项</h2>
+<h3 id="查看各屏幕分辨率模式">查看各屏幕分辨率模式</h3>
+<p>在Terminal(终端)输入<code>xrandr</code>查看屏幕分辨率列表
+之后会出现类似如下的信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Screen 0: minimum 320 x 200, current 3286 x 1080, maximum 32767 x 32767</div><div class="line">eDP1 connected primary 1366x768+0+312 (normal left inverted right x axis y axis) 309mm x 173mm</div><div class="line">640x480        59.9*</div><div class="line">DP1 disconnected (normal left inverted right x axis y axis)</div><div class="line">HDMI1 disconnected (normal left inverted right x axis y axis)</div><div class="line">DP2 connected 1024x768 (normal left inverted right x axis y axis) 0mm x 0mm</div><div class="line">1024x768      60.0*</div><div class="line">800x600        60.3    56.2</div><div class="line">848x480        60.0</div><div class="line">640x480        59.9</div></pre></td></tr></table></figure>
+<p>其中 eDP1/DP1/DP2 是各个显示接口的情况,<code>*</code>代表该接口正在使用的分辨率
+我的就是连接了eDP1和DP2两个接口</p>
+<h3 id="用cvt新建一个显示模式">用cvt新建一个显示模式</h3>
+<figure class="highlight plain"><figcaption><span>新建一个1920x1080分辨率的模式</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cvt 1920 1080</div></pre></td></tr></table></figure>
 <p>之后屏幕会出现两行信息</p>
-<h3 id="用xrandr将新建的模式添加到指定显示接口"><a href="#用xrandr将新建的模式添加到指定显示接口" class="headerlink" title="用xrandr将新建的模式添加到指定显示接口"></a>用xrandr将新建的模式添加到指定显示接口</h3><p>将屏幕上Modeline后的所有内容原封不动地如下接到<code>xrandr --newmode</code>后面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --newmode &quot;1920x1080_60.00&quot; 173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</div></pre></td></tr></table></figure></p>
-<p>然后再用<code>xrandr --addmode</code>把新建的显示分辨率添加到显示器上<br>我是添加到了eDP1这个显示器上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --addmode eDP1 &quot;1920x1080_60.00&quot;</div></pre></td></tr></table></figure></p>
-<h3 id="添加之后进入系统设置"><a href="#添加之后进入系统设置" class="headerlink" title="添加之后进入系统设置"></a>添加之后进入系统设置</h3><p>添加成功后之前只有一个分辨率的eDP1又有了刚刚添加的分辨率的选项</p>
-<h2 id="重新安装驱动"><a href="#重新安装驱动" class="headerlink" title="重新安装驱动"></a>重新安装驱动</h2><h3 id="卸载Nvidia驱动"><a href="#卸载Nvidia驱动" class="headerlink" title="卸载Nvidia驱动"></a>卸载Nvidia驱动</h3><p>先用<code>cd</code>命令进入下载好的驱动的目录下,卸载驱动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ./nvidia.run -uninstall</div></pre></td></tr></table></figure></p>
-<h3 id="使用nouveau驱动或者重装Nvidia驱动"><a href="#使用nouveau驱动或者重装Nvidia驱动" class="headerlink" title="使用nouveau驱动或者重装Nvidia驱动"></a>使用nouveau驱动或者重装Nvidia驱动</h3><p>卸载掉Nvidia驱动之后,系统会自动选用第三方开源的nouveau驱动<br>如果不想用这个驱动<br>按照前面<a href="#安装显卡驱动">2.2.安装显卡驱动</a>再次安装下载好的驱动</p>
+<h3 id="用xrandr将新建的模式添加到指定显示接口">用xrandr将新建的模式添加到指定显示接口</h3>
+<p>将屏幕上Modeline后的所有内容原封不动地如下接到<code>xrandr --newmode</code>后面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --newmode &quot;1920x1080_60.00&quot; 173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</div></pre></td></tr></table></figure>
+<p>然后再用<code>xrandr --addmode</code>把新建的显示分辨率添加到显示器上
+我是添加到了eDP1这个显示器上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xrandr --addmode eDP1 &quot;1920x1080_60.00&quot;</div></pre></td></tr></table></figure>
+<h3 id="添加之后进入系统设置">添加之后进入系统设置</h3>
+<p>添加成功后之前只有一个分辨率的eDP1又有了刚刚添加的分辨率的选项</p>
+<h2 id="重新安装驱动">重新安装驱动</h2>
+<h3 id="卸载nvidia驱动">卸载Nvidia驱动</h3>
+<p>先用<code>cd</code>命令进入下载好的驱动的目录下,卸载驱动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ./nvidia.run -uninstall</div></pre></td></tr></table></figure>
+<h3 id="使用nouveau驱动或者重装nvidia驱动">使用nouveau驱动或者重装Nvidia驱动</h3>
+<p>卸载掉Nvidia驱动之后,系统会自动选用第三方开源的nouveau驱动
+如果不想用这个驱动
+按照前面<a href="#安装显卡驱动">2.2.安装显卡驱动</a>再次安装下载好的驱动</p>
 
       
     </div>
@@ -438,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/05/hexo-markdown-style-test/" rel="next" title="hexo-markdown-style-test">
-                <i class="fa fa-chevron-left"></i> hexo-markdown-style-test
+              <a href="/2018/03/05/hexo-markdown-style-test/" rel="next" title="hexo的Markdown功能测试">
+                <i class="fa fa-chevron-left"></i> hexo的Markdown功能测试
               </a>
             
           </div>
@@ -465,12 +497,6 @@
 
     <div class="post-spread">
       
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
     </div>
   </div>
 
@@ -480,16 +506,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    </div>
 
   
 
@@ -528,6 +544,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="RobertGuo" />
+            
               <p class="site-author-name" itemprop="name">RobertGuo</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -552,7 +572,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -601,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#找问题原因"><span class="nav-number">1.</span> <span class="nav-text">找问题原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决问题"><span class="nav-number">2.</span> <span class="nav-text">解决问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先安装上系统"><span class="nav-number">2.1.</span> <span class="nav-text">先安装上系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装显卡驱动"><span class="nav-number">2.2.</span> <span class="nav-text">安装显卡驱动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他问题"><span class="nav-number">3.</span> <span class="nav-text">其他问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除monitors-xml-文件"><span class="nav-number">3.1.</span> <span class="nav-text">删除monitors.xml 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手动添加屏幕分辨率选项"><span class="nav-number">3.2.</span> <span class="nav-text">手动添加屏幕分辨率选项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看各屏幕分辨率模式"><span class="nav-number">3.2.1.</span> <span class="nav-text">查看各屏幕分辨率模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用cvt新建一个显示模式"><span class="nav-number">3.2.2.</span> <span class="nav-text">用cvt新建一个显示模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用xrandr将新建的模式添加到指定显示接口"><span class="nav-number">3.2.3.</span> <span class="nav-text">用xrandr将新建的模式添加到指定显示接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加之后进入系统设置"><span class="nav-number">3.2.4.</span> <span class="nav-text">添加之后进入系统设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重新安装驱动"><span class="nav-number">3.3.</span> <span class="nav-text">重新安装驱动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载Nvidia驱动"><span class="nav-number">3.3.1.</span> <span class="nav-text">卸载Nvidia驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用nouveau驱动或者重装Nvidia驱动"><span class="nav-number">3.3.2.</span> <span class="nav-text">使用nouveau驱动或者重装Nvidia驱动</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#font-color-black-找问题原因-font"><span class="nav-number">1.</span> <span class="nav-text">找问题原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#font-color-black-解决问题-font"><span class="nav-number">2.</span> <span class="nav-text">解决问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先安装上系统"><span class="nav-number">2.1.</span> <span class="nav-text">先安装上系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装显卡驱动"><span class="nav-number">2.2.</span> <span class="nav-text">安装显卡驱动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#font-color-black-其他问题-font"><span class="nav-number">3.</span> <span class="nav-text">其他问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除monitors-xml-文件"><span class="nav-number">3.1.</span> <span class="nav-text">删除monitors.xml 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手动添加屏幕分辨率选项"><span class="nav-number">3.2.</span> <span class="nav-text">手动添加屏幕分辨率选项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看各屏幕分辨率模式"><span class="nav-number">3.2.1.</span> <span class="nav-text">查看各屏幕分辨率模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用cvt新建一个显示模式"><span class="nav-number">3.2.2.</span> <span class="nav-text">用cvt新建一个显示模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用xrandr将新建的模式添加到指定显示接口"><span class="nav-number">3.2.3.</span> <span class="nav-text">用xrandr将新建的模式添加到指定显示接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加之后进入系统设置"><span class="nav-number">3.2.4.</span> <span class="nav-text">添加之后进入系统设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重新安装驱动"><span class="nav-number">3.3.</span> <span class="nav-text">重新安装驱动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#卸载nvidia驱动"><span class="nav-number">3.3.1.</span> <span class="nav-text">卸载Nvidia驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用nouveau驱动或者重装nvidia驱动"><span class="nav-number">3.3.2.</span> <span class="nav-text">使用nouveau驱动或者重装Nvidia驱动</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -764,26 +784,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://robertguo-site.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://robertguo.site/2018/03/07/ubuntu-system-install/';
-          this.page.identifier = '2018/03/07/ubuntu-system-install/';
-          this.page.title = 'Win10下安装Ubuntu双系统卡logo的解决办法';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://robertguo-site.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -796,6 +796,10 @@
   
 
 
+
+
+
+  
 
 
 

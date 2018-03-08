@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>http://robertguo.site/2017/09/05/HelloWorld/</loc>
-    <lastmod>2018-03-08T02:34:17.725Z</lastmod>
+    <loc>http://robertguo.site/2018/03/05/hexo-markdown-style-test/</loc>
+    <lastmod>2018-03-08T14:58:50.371Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2017-09-05T04:21:49.000Z</pubTime>
+        <title>hexo的Markdown功能测试</title>
+        <pubTime>2018-03-04T16:58:10.000Z</pubTime>
         
-        <tag>Daily</tag>
+        <tag>test</tag>
+         
+        <tag>Markdown</tag>
          
          
            
@@ -21,14 +23,14 @@
 
     
   <url>
-    <loc>http://robertguo.site/2018/03/05/hexo-markdown-style-test/</loc>
-    <lastmod>2018-03-08T02:34:12.510Z</lastmod>
+    <loc>http://robertguo.site/2017/09/05/HelloWorld/</loc>
+    <lastmod>2018-03-08T02:34:17.725Z</lastmod>
     <data>
         <display>
-        <title>hexo-markdown-style-test</title>
-        <pubTime>2018-03-04T16:58:10.000Z</pubTime>
+        <title>Hello World</title>
+        <pubTime>2017-09-05T04:21:49.000Z</pubTime>
         
-        <tag>test</tag>
+        <tag>Daily</tag>
          
          
            
