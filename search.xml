@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Win10下安装Ubuntu双系统卡logo的解决办法]]></title>
+    <url>%2F2018%2F03%2F07%2Fubuntu-system-install%2F</url>
+    <content type="text"><![CDATA[学计算机的,大学期间不调戏调戏Linux等于白读了四年! 我的Linux老师第一节课上 我自己对Linux挺有兴趣,就总想弄来玩一玩开始是在虚拟机上用,但是虚拟机总是有那么点膈应人感觉就像带个手套去牵妹子得手干脆在原来Win10的基础上装成双系统来回倒腾了好几个系统,统统给我在安装前卡住 百度来百度去,系统倒是装了上去,但是又出现了各种各样的问题难受的一匹 找问题原因凡事先谷歌/百度 在网上逛了一圈,说啥的都有我再看了看我这电脑配置 CPU: i5-64003 显卡: 950m 系统: 装机的Win10家庭版 打算往上装的系统: Ubuntu 16.04 结合网上查的,应该是显卡驱动问题没跑了有说 核显+独显 电源管理问题也有说 Ubuntu 的第三方显卡驱动nouveau的问题先不管它啥问题,我就先不给这显卡上驱动行不行? 解决问题先安装上系统 U盘安装卡在logo处时,强制关机就行,然后再次安装 再进入U盘安装时,没进安装界面狂按键盘就行,然后会要选语言,选个看得懂的就行 在F6把nomodeset勾上,然后进入安装 后面按照正常步骤安装就行 安装显卡驱动因为在前面没装上显卡驱动,所以电脑用起来会很操蛋 先去Nvidia官网下载驱动NVIDIA驱动下载 为了方便后面安装,把原本很长的名字改短,比如我改成了nvidia.run 用cd命令进入下载好的驱动文件所在的目录 然后给这个驱动改改权限 1sudo chmod 777 nvidia.run 把第三方驱动nouveau拉黑(视情况,可做可不做) 1sudo gedit /etc/modprobe.d/blacklist.conf 在文件末尾添加blacklist nouveau然后刷新配置 1sudo update-initramfs -u 完事了最好重启下系统 停用图形服务 1sudo service lightdm stop 先用cd命令进入下载好的驱动的目录下,安装驱动 1sudo ./nvidia.run -no-opengl-files -no-opengl-files是表示不安装openGL相关组件,因为这东西有可能导致开机登录又跳回登录界面,最好不装上去 然后重新启动图形界面 1sudo service lightdm restart 最后重启系统,驱动问题就搞定了 其他问题我在学校为了方便,用的是笔记本带一个拓展显示器 在安装完驱动并使用过一段时间后,会出现类似图片上的无法应用原保存的显示器设置 笔记本屏幕分辨率也只有640x480这一个选项网上搜索之后发现,是双屏有几率会出现这样的问题但是到最后我也没搞清楚是什么原因导致的以下是我尝试过的解决方法: 删除monitors.xml 文件1rm ~/.config/monitors.xml 尝试使用这个方法之后开机时间明显变长了估计是生成新的显示配置文件但是最终还是没有解决我的问题 手动添加屏幕分辨率选项查看各屏幕分辨率模式在Terminal(终端)输入xrandr查看屏幕分辨率列表之后会出现类似如下的信息12345678910Screen 0: minimum 320 x 200, current 3286 x 1080, maximum 32767 x 32767eDP1 connected primary 1366x768+0+312 (normal left inverted right x axis y axis) 309mm x 173mm640x480 59.9*DP1 disconnected (normal left inverted right x axis y axis)HDMI1 disconnected (normal left inverted right x axis y axis)DP2 connected 1024x768 (normal left inverted right x axis y axis) 0mm x 0mm1024x768 60.0*800x600 60.3 56.2848x480 60.0640x480 59.9 其中 eDP1/DP1/DP2 是各个显示接口的情况,*代表该接口正在使用的分辨率我的就是连接了eDP1和DP2两个接口 用cvt新建一个显示模式新建一个1920x1080分辨率的模式1cvt 1920 1080 之后屏幕会出现两行信息 用xrandr将新建的模式添加到指定显示接口将屏幕上Modeline后的所有内容原封不动地如下接到xrandr --newmode后面1xrandr --newmode &quot;1920x1080_60.00&quot; 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync 然后再用xrandr --addmode把新建的显示分辨率添加到显示器上我是添加到了eDP1这个显示器上1xrandr --addmode eDP1 &quot;1920x1080_60.00&quot; 添加之后进入系统设置添加成功后之前只有一个分辨率的eDP1又有了刚刚添加的分辨率的选项 重新安装驱动卸载Nvidia驱动先用cd命令进入下载好的驱动的目录下,卸载驱动1sudo ./nvidia.run -uninstall 使用nouveau驱动或者重装Nvidia驱动卸载掉Nvidia驱动之后,系统会自动选用第三方开源的nouveau驱动如果不想用这个驱动按照前面2.2.安装显卡驱动再次安装下载好的驱动]]></content>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>系统安装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo-markdown-style-test]]></title>
+    <url>%2F2018%2F03%2F05%2Fhexo-markdown-style-test%2F</url>
+    <content type="text"><![CDATA[hexo的md风格测试 一级标题二级标题三级标题四级标题五级标题六级标题 链接:404NotFound列表 1 2 3 3.1 3.2 3.3 3.3.1 3.3.1.1 一 二 三 三-一 三-二 三-二-一 三-二-一-一 斜体加粗删除线 加粗斜体删除线 md引用blablabla hexo-blockquote 带作者,来源的引用 作者来源 带链接来源的引用 @薄雾博物杂志 1234567891011//md代码块*list* concat(list* l,list* r)&#123; list** indir = &amp;l; while(* indir) &#123; indir = &amp;((* indir)-&gt;next); &#125; * indir = r; return l;&#125; hexo-codeblock1234567891011&lt;!--hexo的codeblock代码块--&gt;&lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt;&lt;/html&gt; 左对齐 居中对齐 右对齐 asdfa asdfaew fdadf dsafasdfasd adsfasfd afdafd task1 task2 task3 emoji: :smirk: emoji: :no_mouth:]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F09%2F05%2FHelloWorld%2F</url>
+    <content type="text"><![CDATA[我的第一篇博客 大学软狗一个 没想到就这样迷迷糊糊就这样过完了大一,啥也没学到,基本上只会写个hello world,现在突然想做点什么,然后就用github+hexo弄了这个博客还记得我高考完选专业的时候,非计算机类的不选,结果到现在就是天天混日子过现在想要重新一步一步地学习专业方面的东西, 希望能够不负当初的热情吧 这个博客目前打算用来记录Java Python和UML方面的学习,用于自己查阅学习,在以后会慢慢加上更多内容]]></content>
+      <tags>
+        <tag>Daily</tag>
+      </tags>
+  </entry>
+</search>
