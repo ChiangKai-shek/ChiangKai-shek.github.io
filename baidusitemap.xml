@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>http://robertguo.site/2020/04/09/using-ideavim/</loc>
+    <lastmod>2020-04-09T11:25:54.093Z</lastmod>
+    <data>
+        <display>
+        <title>IDEA和PyCharm下vim插件的配置和常用命令</title>
+        <pubTime>2020-04-09T11:25:54.000Z</pubTime>
+        
+        <tag>vim</tag>
+         
+        <tag>IDE</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://robertguo.site/2018/03/07/ubuntu-system-install/</loc>
     <lastmod>2018-04-26T14:25:01.290Z</lastmod>
     <data>
@@ -24,7 +43,7 @@
     
   <url>
     <loc>http://robertguo.site/2018/03/05/hexo-markdown-style-test/</loc>
-    <lastmod>2018-03-08T15:07:38.424Z</lastmod>
+    <lastmod>2018-03-08T15:07:38.425Z</lastmod>
     <data>
         <display>
         <title>hexo的Markdown功能测试</title>
@@ -43,7 +62,7 @@
     
   <url>
     <loc>http://robertguo.site/2017/09/05/HelloWorld/</loc>
-    <lastmod>2018-03-08T15:07:30.401Z</lastmod>
+    <lastmod>2018-03-08T15:07:30.402Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
